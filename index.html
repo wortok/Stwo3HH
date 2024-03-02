@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="anonymous.ico">
+  <title>Social Media Hacking</title>
+  <meta name="description" content="Social Media hacking experts will help you track down cheating partner.">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      background-color: #272727;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" style="background: #111;"></canvas>
+  <div class="container">
+    <div class="rainbow-text">SOCIAL-HACKS.COM</div>
+    <img class="logo-image" src="stock/anonlogo.png">
+    <h2>Login</h2>
+    <form onsubmit="login(event)">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <button type="submit">Log in</button>
+      <p>Don't have an account? <a href="signup.html">Register</a></p>
+    </form>
+  </div>
+  <script src="script.js"></script>
+
+  <script>
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var W = window.innerWidth;
+    var H = window.innerHeight;
+
+    canvas.width = W;
+    canvas.height = H;
+
+    var fontSize = 16;
+    var columns = Math.floor(W / fontSize);
+    var drops = [];
+    for(var i=0; i<columns; i++){
+        drops.push(0);
+    }
+    var str = "JavaScript Hacking Effect";
+    function draw(){
+        context.fillStyle = "rgba(0,0,0,0.05)";
+        context.fillRect(0, 0, W, H);
+        context.fontSize = "700 " + fontSize + "px";
+        context.fillStyle = "#00cc33";
+        for(var i=0; i<columns; i++){
+            var index = Math.floor(Math.random()*str.length);
+            var x = i * fontSize;
+            var y = drops[i] * fontSize;
+            context.fillText(str[index], x, y);
+            if(y >= canvas.height && Math.random() > 0.99){
+                drops[i] = 0;
+            }
+            drops[i]++;
+        }
+    }
+    draw();
+    setInterval(draw, 35);
+</script>
+</body>
+</html>

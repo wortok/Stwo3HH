@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="anonymous.ico">
+    <title>Social Media Hacking</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-image: url("bg-img.jpg");
+            font-weight: 600;
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            border-radius: 10px;
+            background-color: #000000;
+            padding: 20px;
+            color: #fff;
+            text-align: center; /* Center the contact information */
+            border-style: groove;
+            border-color: #09ff0023;
+        }
+
+       
+
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+
+        .logo {
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .logo img {
+            max-width: 90%;
+            height: auto;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Vertically center items */
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #000000;
+            border-radius: 20px;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 10px;
+            border-style: groove;
+            border-color: #09ff0023;
+        }
+
+        .navbar a:hover {
+            background-color: #09ff0023;
+        }
+
+        .navbar-middle {
+            text-align: center;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .container {
+                margin: 20px auto;
+                padding: 10px;
+            }
+
+            .logo img {
+                max-width: 90%;
+                height: auto;
+            }
+
+            .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar-middle {
+        display: flex;
+    flex-direction: column;
+      }
+        }
+
+        h3.footer {
+            color: white;
+            font-weight: 500;
+            margin-top: 40px;
+        }
+
+
+    .account-name {
+            color: white;
+            display: flex;
+            align-items: center;
+            background-color: #000000;
+            border: groove 3px #09ff0023;
+            border-radius: 40px;
+            padding: 5px;
+            font-size: 24px;
+            animation: rainbowText 3s linear infinite; /* Animation applied */
+            background-image: linear-gradient(to right, white, green, white, green, white, green); /* Rainbow gradient */
+            background-size: 700% auto; /* Gradient size */
+            -webkit-background-clip: text; /* Apply gradient as text color */
+            background-clip: text;
+            -webkit-text-fill-color: transparent; /* Transparent text */
+        }
+
+         /* Keyframes for the rainbow text animation */
+         @keyframes rainbowText {
+            0% {
+                background-position: 0 50%; /* Initial position */
+            }
+            100% {
+                background-position: 100% 50%; /* Final position */
+            }
+        }
+
+    .username {
+        margin: 10px auto;
+      font-size: 16px;
+      font-weight: 500;
+      margin-right: 5px;
+    }
+
+    .user-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+
+    canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #111;
+}
+
+
+h5 {
+  font-weight: 500;
+}
+
+.anounc {
+  background-color: #09ff000e;
+  border-radius: 5px;
+  border-style: groove;
+  border-color: #09ff0036;
+}
+
+.color-change {
+            animation: changeColor 5s infinite; /* 5 seconds duration, infinite loop */
+        }
+
+        /* Define the keyframes for the animation */
+        @keyframes changeColor {
+            0% { color: red; } /* Start color */
+            25% { color: blue; } /* Change color at 25% of animation */
+            50% { color: green; } /* Change color at 50% of animation */
+            75% { color: purple; } /* Change color at 75% of animation */
+            100% { color: red; } /* Back to the start color */
+        }
+
+        .image-gallery {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#mainImage {
+    max-width: 550px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-color: green;
+    border-style: groove;
+}
+
+#mainImage:hover {
+    transform: scale(1.05);
+}
+
+.thumbnails {
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 80px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-color: green;
+    border-style: groove;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+#product-price {
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#images {
+    border-style: groove;
+    border-color: green;
+}
+
+
+.daun {
+    font-weight: 500;
+    color: green;
+}
+
+.daun1 {
+    color: green;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+hr {
+    border: 1px solid #15ff004d; /* You can replace #ff0000 with your desired color code */
+    width: 350px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.butt {
+    background-color: green;
+    padding: 9px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    border-style: groove;
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.butt:hover {
+    background-color: black;
+    border-style: groove;
+    border-color: green;
+    color: green;
+}
+
+.popup {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.63); /* Black w/ opacity */
+            padding-top: 420px; /* Location of the box */
+        }
+
+        /* Popup content */
+        .popup-content {
+            background-color: #000000f6;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 400px;
+            border-color: green;
+            border-width: 3px;
+            border-radius: 15px;
+            color: rgb(255, 255, 255);
+        }
+
+        /* Close button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: rgb(255, 0, 0);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .text-boxer {
+            width: 180px;
+            height: 20px;
+            margin-top: 10px;
+            border-color: green;
+            border-width: 2px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+  <canvas id="canvas" style="background: #111;"></canvas>
+<div class="container">
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="anon.png" style="width: 40px; height: 40px; margin-right: 5px;">
+            <p class="color-change"><span style="display: flex;">Social-Hacks.com</span></p>
+        </div>
+        <div class="navbar-middle">
+            <a href="products.html">Home</a>
+            <a href="faq.html">Info</a>
+            <a href="contact.html">Contact</a>
+            <a href="orders.html">My Purchases</a>
+        </div>
+        <div class="account-name">
+            <div class="username">
+                <span id="username"></span>
+              </div> <!-- Replace with actual account name -->
+              <img class="user-img" src="user.png">
+        </div>
+    </div>
+
+<center>
+    <div class="anounc">
+      <h3>Tired of being cheated on?</h3>
+      <h5>Don't hesitate if you think your partner is cheating.
+        <br>Social Hacks will help you getting into a social media account.
+      </h5>
+    </div>
+</center>
+
+    <div class="container">
+        <div class="product-details">
+            <h1 id="product-name"></h1>
+            <div class="image-gallery">
+                <img class="img-thum" id="mainImage" src="">
+                <div class="thumbnails">
+                    <!-- Thumbnails will be added dynamically -->
+                </div>
+            </div>
+            <center>
+            <hr>
+            <p id="product-description"></p>
+            <hr>
+        </center>
+            <p id="product-price"></p>
+            <button class="butt" id="openPopup">Purchase</button>
+                            
+        </div>
+    </div>
+</div>
+
+<div id="myPopup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <h3>Target account Username or Link:</h3>
+        <input class="text-boxer" type="text" id="popupTextInput" placeholder="Enter username or link...">
+        <br><p class="daun1">*Make sure the target details are correct!</p>
+        <br><a id="product-link" class="butt" href="checkout.html">Purchase</a>
+    </div>
+</div>
+<center>
+    <h3 class="footer">S-H &copy; 2024 All rights reserved.</h3>
+</center>
+
+<script>
+    // Get the button that opens the popup
+    var openButton = document.getElementById("openPopup");
+    // Get the popup
+    var popup = document.getElementById("myPopup");
+    // Get the <span> element that closes the popup
+    var closeButton = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the popup 
+    openButton.onclick = function() {
+        popup.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the popup
+    closeButton.onclick = function() {
+        popup.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the popup, close it
+    window.onclick = function(event) {
+        if (event.target == popup) {
+            popup.style.display = "none";
+        }
+    }
+
+    // Handle submit button click inside the popup
+    document.getElementById("popupButton").addEventListener("click", function() {
+        var popupTextInput = document.getElementById("popupTextInput").value;
+        // Do something with the text input here
+        alert("Text entered in the popup: " + popupTextInput);
+        // Close the popup
+        popup.style.display = "none";
+    });
+</script>
+
+
+
+<script>
+    // Add event listener to the link to set the price in the URL
+    document.getElementById('product-link').addEventListener('click', function(event) {
+        // Get the product price
+        const price = document.getElementById('product-price').textContent;
+        // Add the price as a query parameter to the URL
+        this.href = this.href + '?price=' + encodeURIComponent(price);
+    });
+</script>
+
+    <script>
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var W = window.innerWidth;
+        var H = window.innerHeight;
+
+        canvas.width = W;
+        canvas.height = H;
+
+        var fontSize = 16;
+        var columns = Math.floor(W / fontSize);
+        var drops = [];
+        for(var i=0; i<columns; i++){
+            drops.push(0);
+        }
+        var str = "JavaScript Hacking Effect";
+        function draw(){
+            context.fillStyle = "rgba(0,0,0,0.05)";
+            context.fillRect(0, 0, W, H);
+            context.fontSize = "700 " + fontSize + "px";
+            context.fillStyle = "#00cc33";
+            for(var i=0; i<columns; i++){
+                var index = Math.floor(Math.random()*str.length);
+                var x = i * fontSize;
+                var y = drops[i] * fontSize;
+                context.fillText(str[index], x, y);
+                if(y >= canvas.height && Math.random() > 0.99){
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        draw();
+        setInterval(draw, 35);
+    </script>
+
+<script>
+    // Retrieve the username from local storage
+    const username = localStorage.getItem('username');
+
+    // Display the username in the appropriate element
+    const usernameElement = document.getElementById('username');
+    usernameElement.textContent = username;
+  </script>
+
+  <script src="product-script.js"></script>
+
+</body>
+</html>

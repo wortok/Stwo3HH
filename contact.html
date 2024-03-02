@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="anonymous.ico">
+    <title>Social Media Hacking</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-image: url("bg-img.jpg");
+            font-weight: 600;
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+
+        .container {
+            max-width: 850px;
+            margin: 50px auto;
+            border-radius: 10px;
+            background-color: #000000;
+            padding: 20px;
+            color: #fff;
+            text-align: center; /* Center the contact information */
+            border-style: groove;
+            border-color: #09ff0023;
+        }
+
+       
+
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+
+        .logo {
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .logo img {
+            max-width: 90%;
+            height: auto;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Vertically center items */
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #000000;
+            border-radius: 20px;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 10px;
+            border-style: groove;
+            border-color: #09ff0023;
+        }
+
+        .navbar a:hover {
+            background-color: #09ff0023;
+        }
+
+        .navbar-middle {
+            text-align: center;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .container {
+                margin: 20px auto;
+                padding: 10px;
+            }
+
+            .logo img {
+                max-width: 90%;
+                height: auto;
+            }
+
+            .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar-middle {
+        display: flex;
+    flex-direction: column;
+      }
+        }
+
+        h3.footer {
+            color: white;
+            font-weight: 500;
+            margin-top: 190px;
+        }
+
+
+    .account-name {
+            color: white;
+            display: flex;
+            align-items: center;
+            background-color: #000000;
+            border: groove 3px #09ff0023;
+            border-radius: 40px;
+            padding: 5px;
+            font-size: 24px;
+            animation: rainbowText 3s linear infinite; /* Animation applied */
+            background-image: linear-gradient(to right, white, green, white, green, white, green); /* Rainbow gradient */
+            background-size: 700% auto; /* Gradient size */
+            -webkit-background-clip: text; /* Apply gradient as text color */
+            background-clip: text;
+            -webkit-text-fill-color: transparent; /* Transparent text */
+        }
+
+         /* Keyframes for the rainbow text animation */
+         @keyframes rainbowText {
+            0% {
+                background-position: 0 50%; /* Initial position */
+            }
+            100% {
+                background-position: 100% 50%; /* Final position */
+            }
+        }
+
+    .username {
+        margin: 10px auto;
+      font-size: 16px;
+      font-weight: 500;
+      margin-right: 5px;
+    }
+
+    .user-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+
+    canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #111;
+}
+
+
+h5 {
+  font-weight: 500;
+}
+
+.anounc {
+  background-color: #09ff000e;
+  border-radius: 5px;
+  border-style: groove;
+  border-color: #09ff0036;
+}
+
+.color-change {
+            animation: changeColor 5s infinite; /* 5 seconds duration, infinite loop */
+        }
+
+        /* Define the keyframes for the animation */
+        @keyframes changeColor {
+            0% { color: red; } /* Start color */
+            25% { color: blue; } /* Change color at 25% of animation */
+            50% { color: green; } /* Change color at 50% of animation */
+            75% { color: purple; } /* Change color at 75% of animation */
+            100% { color: red; } /* Back to the start color */
+        }
+
+        .contact-info, .live-support {
+            
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .contact-info img, .live-support img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .contact-info h2, .live-support h2 {
+            margin-bottom: 10px;
+        }
+        .contact-info p, .live-support p {
+            margin: 0;
+            line-height: 1.6;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+    </style>
+
+</head>
+<body>
+  <canvas id="canvas" style="background: #111;"></canvas>
+<div class="container">
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="anon.png" style="width: 40px; height: 40px; margin-right: 5px;">
+            <p class="color-change"><span style="display: flex;">Social-Hacks.com</span></p>
+        </div>
+        <div class="navbar-middle">
+            <a href="products.html">Home</a>
+            <a href="faq.html">Info</a>
+            <a href="contact.html">Contact</a>
+            <a href="orders.html">My Purchases</a>
+        </div>
+        <div class="account-name">
+            <div class="username">
+                <span id="username"></span>
+              </div> <!-- Replace with actual account name -->
+              <img class="user-img" src="user.png">
+        </div>
+    </div>
+
+    <div class="anounc">
+      <h3>Contact Information</h3>
+      <h5>Before contacting please make sure to read our "Info" page. 
+      </h5>
+    </div>
+
+
+    <div class="container">
+        <div class="contact-info">
+            <img src="stock/telegram.png">
+            <div>
+                <h2>Telegram Support</h2>
+                <p>You can contact us through Telegram for any inquiries or questions.
+                Telegram:<a href="https://t.me/snapchat_hack">t.me/snapchat_hack</a></p>
+            </div>
+        </div>
+        <div class="live-support">
+            <img src="stock/live-chat.png">
+            <div>
+                <h2>Live Support</h2>
+                <p>We offer live support during business hours. Feel free to reach out to us for immediate assistance.</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<center>
+    <h3 class="footer">S-H &copy; 2024 All rights reserved.</h3>
+</center>
+
+
+    <script>
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var W = window.innerWidth;
+        var H = window.innerHeight;
+
+        canvas.width = W;
+        canvas.height = H;
+
+        var fontSize = 16;
+        var columns = Math.floor(W / fontSize);
+        var drops = [];
+        for(var i=0; i<columns; i++){
+            drops.push(0);
+        }
+        var str = "JavaScript Hacking Effect";
+        function draw(){
+            context.fillStyle = "rgba(0,0,0,0.05)";
+            context.fillRect(0, 0, W, H);
+            context.fontSize = "700 " + fontSize + "px";
+            context.fillStyle = "#00cc33";
+            for(var i=0; i<columns; i++){
+                var index = Math.floor(Math.random()*str.length);
+                var x = i * fontSize;
+                var y = drops[i] * fontSize;
+                context.fillText(str[index], x, y);
+                if(y >= canvas.height && Math.random() > 0.99){
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        draw();
+        setInterval(draw, 35);
+    </script>
+
+<script>
+    // Retrieve the username from local storage
+    const username = localStorage.getItem('username');
+
+    // Display the username in the appropriate element
+    const usernameElement = document.getElementById('username');
+    usernameElement.textContent = username;
+  </script>
+
+</body>
+</html>

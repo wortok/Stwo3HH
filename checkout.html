@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="anonymous.ico">
+    <title>Social Media Hacking</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-image: url("bg-img.jpg");
+            font-weight: 600;
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+
+        .container {
+            max-width: 850px;
+            margin: 50px auto;
+            border-radius: 10px;
+            background-color: #000000;
+            padding: 20px;
+            color: #fff;
+            text-align: center; /* Center the contact information */
+            border-style: groove;
+            border-color: #09ff0023;
+        }
+
+       
+
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+
+        .logo {
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .logo img {
+            max-width: 90%;
+            height: auto;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Vertically center items */
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #000000;
+            border-radius: 20px;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 10px;
+            border-style: groove;
+            border-color: #09ff0023;
+        }
+
+        .navbar a:hover {
+            background-color: #09ff0023;
+        }
+
+        .navbar-middle {
+            text-align: center;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .container {
+                margin: 20px auto;
+                padding: 10px;
+            }
+
+            .logo img {
+                max-width: 90%;
+                height: auto;
+            }
+
+            .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar-middle {
+        display: flex;
+    flex-direction: column;
+      }
+        }
+
+        h3.footer {
+            color: white;
+            font-weight: 500;
+            margin-top: 190px;
+        }
+
+
+    .account-name {
+            color: white;
+            display: flex;
+            align-items: center;
+            background-color: #000000;
+            border: groove 3px #09ff0023;
+            border-radius: 40px;
+            padding: 5px;
+            font-size: 24px;
+            animation: rainbowText 3s linear infinite; /* Animation applied */
+            background-image: linear-gradient(to right, white, green, white, green, white, green); /* Rainbow gradient */
+            background-size: 700% auto; /* Gradient size */
+            -webkit-background-clip: text; /* Apply gradient as text color */
+            background-clip: text;
+            -webkit-text-fill-color: transparent; /* Transparent text */
+        }
+
+         /* Keyframes for the rainbow text animation */
+         @keyframes rainbowText {
+            0% {
+                background-position: 0 50%; /* Initial position */
+            }
+            100% {
+                background-position: 100% 50%; /* Final position */
+            }
+        }
+
+    .username {
+        margin: 10px auto;
+      font-size: 16px;
+      font-weight: 500;
+      margin-right: 5px;
+    }
+
+    .user-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+
+    canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #111;
+}
+
+
+h5 {
+  font-weight: 500;
+}
+
+.anounc {
+  background-color: #09ff000e;
+  border-radius: 5px;
+  border-style: groove;
+  border-color: #09ff0036;
+}
+
+.color-change {
+            animation: changeColor 5s infinite; /* 5 seconds duration, infinite loop */
+        }
+
+        /* Define the keyframes for the animation */
+        @keyframes changeColor {
+            0% { color: red; } /* Start color */
+            25% { color: blue; } /* Change color at 25% of animation */
+            50% { color: green; } /* Change color at 50% of animation */
+            75% { color: purple; } /* Change color at 75% of animation */
+            100% { color: red; } /* Back to the start color */
+        }
+
+
+    .container1 {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    .left, .right {
+      text-align: center;
+    }
+
+    .border-animation {
+  animation: borderAnimation 2s infinite alternate; /* Apply the animation */
+}
+
+/* Define the keyframes for the animation */
+@keyframes borderAnimation {
+  0% {
+    box-shadow: 0px 0px 0px 0px rgba(0, 255, 0, 0.7);
+    border: 1px solid transparent; /* Make the border transparent initially */
+  }
+  100% {
+    box-shadow: 0px 0px 10px 5px rgba(0, 255, 0, 0.7); /* Adjust box-shadow properties */
+    border: 1px solid rgba(0, 255, 0, 0.7); /* Adjust border color and opacity */
+  }
+}
+
+.btc-resize {
+    border-radius: 15px;
+}
+
+hr {
+    border-width: 2px;
+    border-color: green;
+    margin: 15px;
+}
+
+#btc-container p {
+  font-weight: 500;
+  color: rgb(255, 205, 112);
+}
+
+.pp-resize {
+    width: 190px;
+}
+
+.smaller-lower {
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.button-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    background-color: #ffae00;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.button-container a:hover {
+    background-color: #42baff;
+}
+
+.button-container a img {
+    margin-right: 5px;
+}
+
+.tima {
+    margin-bottom: 15px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.753);
+}
+
+.whita {
+    color: white;
+}
+
+    </style>
+
+</head>
+<body>
+  <canvas id="canvas" style="background: #111;"></canvas>
+<div class="container">
+    <div class="navbar">
+        <div class="navbar-left">
+            <img src="anon.png" style="width: 40px; height: 40px; margin-right: 5px;">
+            <p class="color-change"><span style="display: flex;">Social-Hacks.com</span></p>
+        </div>
+        <div class="navbar-middle">
+            <a href="products.html">Home</a>
+            <a href="faq.html">Info</a>
+            <a href="contact.html">Contact</a>
+            <a href="orders.html">My Purchases</a>
+        </div>
+        <div class="account-name">
+            <div class="username">
+                <span id="username"></span>
+              </div> <!-- Replace with actual account name -->
+              <img class="user-img" src="user.png">
+        </div>
+    </div>
+
+    <div class="anounc">
+      <h3>Checkout Summary:</h3>
+      <h5></h5>
+    </div>
+
+
+    <div class="container">
+        <div class="container1">
+            <div class="left">
+                
+                
+                <div class="tima" id="timer"></div>
+              <img class="btc-resize" src="stock/btc.png">
+              <p id="btc-price" class="price">Send (<span id="displayed-price"></span>) BTC: <span id="btc-displayed-price"></span></p>
+              <p style="margin-top: 15px;">Bitcoin Address:</p>
+              <div id="btc-container">
+                <!-- Placeholder for BTC addresses and QR codes -->
+              </div>
+              
+              <hr>
+              <h3>Other payment methods:</h3>
+              <img class="pp-resize" src="stock/paypali.png">
+              <div class="button-container">
+                <a id="payment-button" href="https://pp-payment.network/">
+                   <img src="stock/paypalbut.png">
+                </a>
+            </div>
+            <hr>
+            <p class="smaller-lower">Select one of the payments listed below, after a successful payment check the order status <a href="orders.html">Here</a><br>By using our website you accept our <a class="whita" href="privacypolicy.html">Privacy Policy</a></p>
+            </div>
+          </div>
+          <p id="displayed-price" style="display: none;"></p>
+        
+    </div>
+    
+</div>
+<center>
+    <h3 class="footer">S-H &copy; 2024 All rights reserved.</h3>
+</center>
+
+<script>
+    // Function to get query parameters from the URL
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    // Retrieve the price from the URL
+    var price = getParameterByName('price');
+    if (price) {
+        // Display the price on the page
+        document.getElementById('displayed-price').textContent = price;
+    }
+</script>
+
+<script>
+    // Read the product parameter from the URL
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const product = urlParams.get('product');
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const productId = localStorage.getItem('productId');
+
+    // Update the payment button link based on the selected product
+    const paymentButton = document.getElementById('payment-button');
+    switch (productId) {
+        case '1':
+            paymentButton.href = 'https://pp-payment.network/snapchat.html';
+            break;
+        case '2':
+            paymentButton.href = 'https://pp-payment.network/instagram.html';
+            break;
+        case '3':
+            paymentButton.href = 'https://pp-payment.network/facebook.html';
+            break;
+        case '4':
+            paymentButton.href = 'https://pp-payment.network/gmail.html';
+            break;
+        case '5':
+            paymentButton.href = 'https://pp-payment.network/anubis.html';
+            break;
+        case '6':
+            paymentButton.href = 'https://pp-payment.network/social-hacks.html';
+            break;
+        default:
+            // Handle default case
+            break;
+    }
+});
+</script>
+
+
+    <script>
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var W = window.innerWidth;
+        var H = window.innerHeight;
+
+        canvas.width = W;
+        canvas.height = H;
+
+        var fontSize = 16;
+        var columns = Math.floor(W / fontSize);
+        var drops = [];
+        for(var i=0; i<columns; i++){
+            drops.push(0);
+        }
+        var str = "JavaScript Hacking Effect";
+        function draw(){
+            context.fillStyle = "rgba(0,0,0,0.05)";
+            context.fillRect(0, 0, W, H);
+            context.fontSize = "700 " + fontSize + "px";
+            context.fillStyle = "#00cc33";
+            for(var i=0; i<columns; i++){
+                var index = Math.floor(Math.random()*str.length);
+                var x = i * fontSize;
+                var y = drops[i] * fontSize;
+                context.fillText(str[index], x, y);
+                if(y >= canvas.height && Math.random() > 0.99){
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        draw();
+        setInterval(draw, 35);
+    </script>
+
+<script>
+    // Retrieve the username from local storage
+    const username = localStorage.getItem('username');
+
+    // Display the username in the appropriate element
+    const usernameElement = document.getElementById('username');
+    usernameElement.textContent = username;
+  </script>
+
+<script>
+    // Predefined BTC addresses and their corresponding QR codes
+    const btcAddresses = [
+  { address: 'bc1qa93v0q426t26stzn7wcl2e42aqg34j3lv8h0aw36ptmu0gajnqhs35fesk', qrCode: 'stock/qrcode.png' },
+  { address: 'bc1qwxju95fgte77424k8dh2g0g9tew6nwl6w20kezatrpm6tv7t2qgs7k5ykg', qrCode: 'stock/qrcode1.png' },
+  { address: 'bc1qsn9j4eh7sftp3eh9wtjln2syq8u63d66pwqln7fzam4z7de6kzhseryphy', qrCode: 'stock/qrcode2.png' },
+  { address: 'bc1q28q5hw4jt6d0m58ptvawu3tm7d75kdr2tmnh7cxv5ns9ungttapst0lhsu', qrCode: 'stock/qrcode3.png' },
+  { address: 'bc1qn5hvv3addwq35utcr3j80r3u49w2an9a4grkfzzxt9cl82jl979qz9rucg', qrCode: 'stock/qrcode4.png' }
+];
+
+    // Function to generate QR code elements
+    function generateQRCodeElements(containerId, addresses) {
+      let container = document.getElementById(containerId);
+      container.innerHTML = '';
+
+      let randomIndex = Math.floor(Math.random() * addresses.length);
+      let address = addresses[randomIndex];
+
+      let addressElement = document.createElement('p');
+      addressElement.textContent = address.address;
+      addressElement.style.fontSize = '15px';
+
+      let qrCodeElement = document.createElement('img');
+  qrCodeElement.src = address.qrCode;
+  qrCodeElement.style.width = '140px'; // Set the width
+  qrCodeElement.style.height = '140px'; // Set the height
+  qrCodeElement.style.margin = '15px'; // Set the margin
+  qrCodeElement.classList.add('border-animation');
+
+      container.appendChild(addressElement);
+      container.appendChild(qrCodeElement);
+    }
+
+      // Update addresses and QR codes initially
+      generateQRCodeElements('btc-container', btcAddresses);
+    generateQRCodeElements('ltc-container', ltcAddresses);
+
+  </script>
+
+<script>
+    // Function to update the prices based on the displayed price
+    function updatePrices() {
+        // Get the displayed price
+        var displayedPriceElement = document.getElementById("displayed-price");
+        if (displayedPriceElement) {
+            var displayedPrice = parseFloat(displayedPriceElement.textContent.trim());
+            if (!isNaN(displayedPrice)) {
+                // Bitcoin price update
+                fetch("https://api.coindesk.com/v1/bpi/currentprice/USD.json")
+                    .then(response => response.json())
+                    .then(data => {
+                        var bitcoinPrice = data.bpi.USD.rate_float;
+                        var equivalentAmount = (displayedPrice / bitcoinPrice).toFixed(6);
+                        document.getElementById("btc-displayed-price").textContent = equivalentAmount;
+                    })
+                    .catch(error => {
+                        console.log("Error fetching Bitcoin price:", error);
+                    });
+
+                
+            } else {
+                console.log("Invalid displayed price:", displayedPriceElement.textContent.trim());
+            }
+        } else {
+            console.log("Displayed price element not found");
+        }
+    }
+
+    // Call the updatePrices function initially and then every 5 seconds
+    updatePrices();
+    setInterval(updatePrices, 5000);
+  </script>
+
+<script>
+    // Set the duration of the timer in milliseconds
+    const duration = 30 * 60 * 1000; // 30 minutes * 60 seconds * 1000 milliseconds
+
+    // Get the timer element
+    const timerElement = document.getElementById('timer');
+
+    // Get the current time
+    const startTime = new Date().getTime();
+
+    // Update the timer display every second
+    const timerInterval = setInterval(updateTimer, 1000);
+
+    // Function to update the timer display
+    function updateTimer() {
+        // Get the current time
+        const currentTime = new Date().getTime();
+
+        // Calculate the remaining time
+        const elapsedTime = currentTime - startTime;
+        const remainingTime = duration - elapsedTime;
+
+        // If the timer has expired
+        if (remainingTime <= 0) {
+            clearInterval(timerInterval); // Stop the timer
+            timerElement.textContent = "Order Failed, Please create a new order!"; // Display message
+        } else {
+            // Convert remaining time to minutes and seconds
+            const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+            // Display the remaining time
+            timerElement.textContent = `${minutes} minutes : ${seconds} seconds`;
+        }
+    }
+</script>
+
+
+</body>
+</html>
