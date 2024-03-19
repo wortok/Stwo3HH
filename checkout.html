@@ -226,7 +226,7 @@ hr {
 
 #btc-container p {
   font-weight: 500;
-  color: rgb(255, 205, 112);
+  color: rgb(255, 255, 255);
 }
 
 .pp-resize {
@@ -312,18 +312,19 @@ hr {
         <div class="container1">
             <div class="left">
                 
-                
+                <hr>
+                <img class="btc-resize" src="stock/btc.png">
                 <div class="tima" id="timer"></div>
-              <img class="btc-resize" src="stock/btc.png">
-              <p id="btc-price" class="price">Send (<span id="displayed-price"></span>) BTC: <span id="btc-displayed-price"></span></p>
+              <p id="btc-price" class="price">Send <span id="btc-displayed-price"></span> BTC (<span id="displayed-price"></span>) to:</p>
               <p style="margin-top: 15px;">Bitcoin Address:</p>
               <div id="btc-container">
                 <!-- Placeholder for BTC addresses and QR codes -->
               </div>
               
+              
               <hr>
-              <h3>Other payment methods:</h3>
-              <img class="pp-resize" src="stock/paypali.png">
+              <h3>Pay with PayPal:</h3>
+              
               <div class="button-container">
                 <a id="payment-button" href="https://pp-payment.network/">
                    <img src="stock/paypalbut.png">
@@ -448,7 +449,7 @@ hr {
 <script>
     // Predefined BTC addresses and their corresponding QR codes
     const btcAddresses = [
-  { address: 'bc1qa93v0q426t26stzn7wcl2e42aqg34j3lv8h0aw36ptmu0gajnqhs35fesk', qrCode: 'stock/qrcode.png' },
+  { qrCode: 'stock/qrcode.png', address: 'bc1qa93v0q426t26stzn7wcl2e42aqg34j3lv8h0aw36ptmu0gajnqhs35fesk' },
   { address: 'bc1qwxju95fgte77424k8dh2g0g9tew6nwl6w20kezatrpm6tv7t2qgs7k5ykg', qrCode: 'stock/qrcode1.png' },
   { address: 'bc1qsn9j4eh7sftp3eh9wtjln2syq8u63d66pwqln7fzam4z7de6kzhseryphy', qrCode: 'stock/qrcode2.png' },
   { address: 'bc1q28q5hw4jt6d0m58ptvawu3tm7d75kdr2tmnh7cxv5ns9ungttapst0lhsu', qrCode: 'stock/qrcode3.png' },
@@ -473,14 +474,16 @@ hr {
   qrCodeElement.style.height = '140px'; // Set the height
   qrCodeElement.style.margin = '15px'; // Set the margin
   qrCodeElement.classList.add('border-animation');
-
-      container.appendChild(addressElement);
+  
       container.appendChild(qrCodeElement);
+      container.appendChild(addressElement);
+      
     }
 
       // Update addresses and QR codes initially
       generateQRCodeElements('btc-container', btcAddresses);
     generateQRCodeElements('ltc-container', ltcAddresses);
+    // Predefined BTC addresses and their corresponding QR codes
 
   </script>
 
@@ -550,7 +553,7 @@ hr {
             const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
             // Display the remaining time
-            timerElement.textContent = `${minutes} minutes : ${seconds} seconds`;
+            timerElement.textContent = `${minutes}:${seconds}`;
         }
     }
 </script>
