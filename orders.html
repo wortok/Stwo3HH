@@ -279,6 +279,33 @@ h5 {
   background-color: #999;
 }
 
+.button {
+        padding: 7px 14px; /* Adjust padding as needed */
+        border: none;
+        border-radius: 4px;
+        background-color: #09ff0054; /* Change to your desired color */
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    /* Styles for the button on hover */
+    .button:hover {
+        background-color: #00b395; /* Change to your desired color */
+    }
+
+    .text5 {
+        margin-top: 10px;
+    }
+
+    .text6 {
+        font-weight: 700;
+        color: #b9ffb6b7;
+    }
+
+    .hr {
+        border-color: green;
+    }
 
     </style>
 
@@ -307,12 +334,18 @@ h5 {
 
       <div class="anounc">
         <h3>Order History</h3>
-      <h5>If you do not see your order after a purchase, make sure to refresh the page.
+      <h5>After purchase please enter your order number # to check on your hacked account status
           <br>2-Factor authenticator updates live, make sure to refresh the page after you're being asked for one.
       </h5>
     </div>
 
-    <h4 class="shtl">Order information for social media:</h4>
+    <h4 class="shtl">Order information</h4>
+<hr class="hr">
+    <div class="text5">
+        <span class="text6">Enter your order number:</span>
+        <input type="text" class="text-field" placeholder="Order #number">
+        <button class="button" onclick="showMessage()">Apply</button>
+    </div>
 
     <div class="table-container">
     <table>
@@ -332,44 +365,7 @@ h5 {
             <td>-</td>
             <td>-</td>
         </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
     </table>
-    <div class="page-buttons">
-        <button class="arrow left">&lt;</button>
-        <button class="number">1</button>
-        <button class="arrow right">&gt;</button>
-      </div>
 
     <h4 class="shtl">License key, Download, Tutorial:</h4>
     <table>
@@ -383,11 +379,6 @@ h5 {
             <td>-</td>
             <td>-</td>
         </tr>
-        <tr>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
     </table>
 </div>
     
@@ -395,6 +386,13 @@ h5 {
 <center>
     <h3 class="footer">S-H &copy; 2024 All rights reserved.</h3>
 </center>
+
+<script>
+    function showMessage() {
+        var textFieldValue = document.querySelector('.text-field').value;
+        alert("Order not found please double check." + textFieldValue);
+    }
+</script>
 
 
     <script>
