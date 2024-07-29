@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
             images: ['stock/snaphack.gif', 'stock/version.png'],
             description: 'What will be provided?',
             details: '<p class="daun">1. Snapchat account password.<br>2. Snapchat account my eyes code.<br>3. Two-Factor authenticator.<br>4. Support, Guaranteed Login.<br>*Order status shows up in Your Purchases page.</p>',
-            price: '90$'
+            price: '150$'
         },
         '2': {
             name: 'Instagram Account Hack',
